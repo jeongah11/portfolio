@@ -28,10 +28,14 @@
   --weight-thin: 100;
 
   /* Size */
+  --size-border-radius: 4px;
 }
 
 /* 공통 */
 * { box-sizing: border-box; }
+body { margin: 0; font-family: 'Roboto', sans-serif; cursor: default; }
+a { text-decoration: none; color: var(--color-white);}
+ul { list-style: none; padding-left: 0; }
 
 /* Typography */
 h1 {
@@ -57,4 +61,33 @@ p {
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 4px 0;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+}
+.navbar__menu {
+  display: flex;
+}
+.navbar__menu__item {
+  margin: 0 4px;
+  padding: 8px 12px;
+  border-radius: var(--size-border-radius);
+  cursor: pointer;
+}
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+.navbar__menu__item:hover {
+  background-color: var(--color-dark-pink);
 }
