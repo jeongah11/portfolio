@@ -320,3 +320,38 @@ p {
 .project:hover .project__description p {
   transform: translateY(0);
 }
+
+/* Testimonials */
+#testimonials {
+  background-color: var(--color-light-white);
+}
+.testimonials {
+  margin: 40px;
+}
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
+.testimonials__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.testimonial:nth-child(odd) .testimonials__avatar  {
+  margin-right: 40px;
+}
+.testimonial:nth-child(even) .testimonials__avatar {
+  order: 1;
+  margin-left: 40px;
+}
+.testimonial__speech-bubble {
+  padding: 18px;
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-white);
+}
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
+}
+.testimonial__speech-bubble a {
+  color: var(--color-pink);
+}
