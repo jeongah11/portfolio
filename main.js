@@ -1,6 +1,6 @@
 'use strict';
 
-//navbar scroll 이벤트
+//scroll 시 navbar style 변경
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
@@ -11,13 +11,14 @@ document.addEventListener('scroll', () => {
   }
 });
 
-/* Navbar Scroll */
-/* document.addEventListener('scroll', function() {
-  const navbar = document.getElementById('navbar');
-  console.log(document.documentElement.scrollTop);
-  if(document.documentElement.scrollTop == 0) {
-    navbar.classList.remove('scroll');
-  } else if (document.documentElement.scrollTop > 0) {
-    navbar.classList.add('scroll');
+//navbar 클릭 시 scroll 이동 이벤트
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
   }
-}); */
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({behavior: 'smooth'});
+});
