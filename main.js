@@ -28,6 +28,15 @@ homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
 
+//#home 콘텐츠 scroll 시 투명 효과
+const home = document.querySelector('#home');
+const homeHeight = home.getBoundingClientRect().height;
+const homeContent = document.querySelector('.home__container');
+document.addEventListener('scroll', () => {
+  homeContent.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({behavior: 'smooth'});
