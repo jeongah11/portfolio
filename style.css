@@ -69,12 +69,21 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 16px;
-  background-color: var(--color-pink);
+  /* background-color: var(--color-pink); */
   color: var(--color-white);
+  transition: all var(--animation-duration) ease-in-out;
+}
+#navbar.navbar--dark {
+  height: 70px;
+  background-color: var(--color-pink);
 }
 .navbar__logo {
   font-size: var(--font-medium);
@@ -108,6 +117,7 @@ p {
 /* Home */
 #home {
   padding: 40px;
+  padding-top: 120px;
   /* background: url(imgs/) center/cover no-repeat; 이미지 추가 */
   background: var(--color-dark-pink);
   text-align: center;
