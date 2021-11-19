@@ -162,22 +162,29 @@
     <h1>Works</h1>
     <h2>Projects</h2>
     <div class="work__categories">
-      <button class="category__btn active">All <span class="category__count">1</span></button>
-      <button class="category__btn">PC <span class="category__count">1</span></button>
-      <button class="category__btn">Mobile <span class="category__count">1</span></button>
-      <button class="category__btn">반응형 <span class="category__count">1</span></button>
+      <button class="category__btn active" data-filter="*">All <span class="category__count">1</span></button>
+      <button class="category__btn" data-filter="pc">PC <span class="category__count">1</span></button>
+      <button class="category__btn" data-filter="mobile">Mobile <span class="category__count">1</span></button>
+      <button class="category__btn" data-filter="responsive">반응형 <span class="category__count">1</span></button>
     </div>
 
     <div class="work__projects">
-      <a href="#" class="project" target="blank">
-        <img src="imgs/favicon.png" alt="" class="project__img" data-type="PC">
+      <a href="#" class="project" data-type="pc" target="blank">
+        <img src="imgs/favicon.png" alt="" class="project__img">
         <div class="project__description">
           <h3>title</h3>
           <p>설명</p>
         </div>
       </a>
-      <a href="#" class="project" target="blank">
-        <img src="imgs/favicon.png" alt="" class="project__img" data-type="Mobile">
+      <a href="#" class="project" data-type="mobile" target="blank">
+        <img src="imgs/favicon.png" alt="" class="project__img">
+        <div class="project__description">
+          <h3>title</h3>
+          <p>설명</p>
+        </div>
+      </a>
+      <a href="#" class="project" data-type="responsive" target="blank">
+        <img src="imgs/favicon.png" alt="" class="project__img">
         <div class="project__description">
           <h3>title</h3>
           <p>설명</p>

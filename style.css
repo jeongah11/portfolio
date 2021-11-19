@@ -271,7 +271,7 @@ p {
 .category__count {
   display: inline-block;
   position: relative;
-  top: -20px;
+  top: -10px;
   left: 4px;
   width: 24px;
   height: 24px;
@@ -287,6 +287,12 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.95) translateY(40px);
 }
 .project {
   display: flex;
@@ -297,6 +303,9 @@ p {
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
+}
+.project.invisible {
+  display: none;
 }
 .project__img {
   max-width: 100%;
