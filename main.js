@@ -2,9 +2,9 @@
 
 //scroll 시 navbar style 변경
 const navbar = document.querySelector('#navbar');
-const navbarHeight = navbar.getBoundingClientRect().height;
+// const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-  if(window.scrollY > navbarHeight) {
+  if(window.scrollY > 0) {
     navbar.classList.add('navbar--dark');
   } else {
     navbar.classList.remove('navbar--dark');
@@ -45,6 +45,13 @@ workBtnContainer.addEventListener('click', (e) => {
   if(filter ==null) {
     return;
   }
+
+  //전체 버튼 active 지운 후 선택한 버튼 aictive 처리
+  const active = document.querySelector('.category__btn.active');
+  active.classList.remove('active');
+  const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode; // button 안의 span 클릭했을 경우 처리
+  target.classList.add('active');
+
   projectContainer.classList.add('anim-out'); //filtering 시작 project 사라지는 ani
   setTimeout(() => {
     //클릭한 버튼과 일치하는 data-type filter
@@ -73,6 +80,7 @@ arrowUp.addEventListener('click', () => {
 });
 
 
+//해당 selector로 scroll 이동
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({behavior: 'smooth'});
