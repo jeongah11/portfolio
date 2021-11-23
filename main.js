@@ -19,7 +19,14 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
+});
+
+// navbar toggle button (mobile)
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', (e) => {
+  navbarMenu.classList.toggle('open');
 });
 
 //Home 'Contact Me' button
@@ -78,6 +85,7 @@ document.addEventListener('scroll', () => {
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
 });
+
 
 
 //해당 selector로 scroll 이동
