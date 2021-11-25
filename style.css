@@ -39,7 +39,7 @@
 body { margin: 0; font-family: 'Roboto', sans-serif; cursor: default; }
 a { text-decoration: none; color: var(--color-white);}
 ul { list-style: none; padding-left: 0; }
-button { background-color: transparent; cursor: pointer; border: none; outline: none; }
+button { padding: 0; background-color: transparent; cursor: pointer; border: none; outline: none; }
 
 /* Typography */
 h1 {
@@ -139,6 +139,9 @@ p {
   color: var(--color-white);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
+}
+.home__contact:hover {
+  background-color: var(--color-orange);
 }
 
 /* Section common */
@@ -249,6 +252,7 @@ p {
   margin: 40px;
 }
 .category__btn {
+  position: relative;
   height: 40px;
   padding: 0 48px;
   border: 1px solid var(--color-dark-white);
@@ -263,14 +267,14 @@ p {
 }
 .category__btn.active .category__count,
 .category__btn:hover .category__count {
-  top: 0;
+  top: 7px;
   opacity: 1;
 }
 .category__count {
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: -10px;
-  left: 4px;
+  right: 16px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -428,15 +432,21 @@ p {
   transition: all var(--animation-duration) ease-in;
 }
 .arrow-up.visible {
-  opacity: 0.8;
-  pointer-events: auto;
-}
-.arrow-up:hover {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   /* Navbar */
   #navbar {
     flex-direction: column;
@@ -457,16 +467,38 @@ p {
   }
   .navbar__toggle-btn {
     display: block;
+    top: 18px;
+    right: 16px;
+    font-size: var(--font-medium);
+  }
+
+  /* Home */
+  .home__avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Section common */
+  .section {
+    padding: 16px;
+    padding-top: 40px;
   }
 
   /* About */
   .about__majors {
     flex-direction: column;
     align-items: center;
+    margin: 40px 0 0;
   }
   .major {
     width: 100%;
-    margin-bottom: 38px;
+    margin-bottom: 40px;
+  }
+  .major__icon {
+    width: 120px;
+    height: 120px;
+    line-height: 124px;
+    font-size: 60px;
   }
 
   /* Skills */
@@ -475,13 +507,34 @@ p {
   }
 
   /* Works */
+  .work__categories {
+    margin: 30px;
+  }
+  .category__btn {
+    width: 100%;
+    margin: 2px 0;
+  }
   .project {
     flex-grow: 1;
   }
 
   /* Testimonials */
+  .testimonial {
+    display: block;
+  }
   .testimonials__avatar {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+  }
+  .testimonial:nth-child(odd) .testimonials__avatar,
+  .testimonial:nth-child(even) .testimonials__avatar {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  /* top button */
+  .arrow-up {
+    bottom: 16px;
+    right: 16px;
   }
 }
