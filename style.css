@@ -43,28 +43,30 @@ button { padding: 0; background-color: transparent; cursor: pointer; border: non
 
 /* Typography */
 h1 {
+  margin: 16px 0;
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
-  margin: 16px 0;
 }
 h2 {
+  margin: 8px 0;
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
   color: var(--color-black);
-  margin: 8px 0;
 }
 h3 {
+  margin: 8px 0;
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
-  margin: 8px 0;
 }
 p {
+  margin: 4px 0;
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
-  margin: 4px 0;
+  line-height: 1.8em;
+  word-break: keep-all;
 }
 
 /* Navbar */
@@ -102,6 +104,9 @@ p {
 .navbar__menu__item:hover {
   border: 1px solid var(--color-white);
   background-color: var(--color-dark-pink);
+}
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
 }
 
 .navbar__toggle-btn {
