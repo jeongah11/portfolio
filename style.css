@@ -183,7 +183,7 @@ p {
 }
 .major__icon:hover i {
   color: var(--color-dark-blue);
-  transform: rotate(-30deg) scale(1.1);
+  transform: rotate(-10deg) scale(1.2);
 }
 .major__title, .major__description {
   color: var(--color-dark-grey);
@@ -233,7 +233,7 @@ p {
 .skill__bar {
   height: 3px;
   margin-top: 5px;
-  background-color: var(--color-grey);
+  background-color: var(--color-light-grey);
 }
 .skill__value {
   height: 3px;
